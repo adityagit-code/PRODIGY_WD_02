@@ -28,8 +28,6 @@ function resetStopwatch() {
 
     document.getElementById("display").textContent = "00:00:00";
     document.getElementById("laps").innerHTML = "";
-
-    // Remove active state from all buttons
     document.querySelectorAll(".buttons button")
         .forEach(btn => btn.classList.remove("active"));
 }
@@ -57,7 +55,6 @@ function pad(num) {
     return num < 10 ? "0" + num : num;
 }
 
-/* Highlight clicked button */
 function handleButton(button) {
     const buttons = document.querySelectorAll(".buttons button");
     buttons.forEach(btn => btn.classList.remove("active"));
